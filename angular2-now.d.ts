@@ -1,11 +1,13 @@
-
-
 // Type definitions for angular2-now 1.1.6
 // Project: https://github.com/pbastowski/angular2-now
 // Definitions by: Onder Ceylan <https://github.com/onderceylan>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
 declare module 'angular2-now' {
+    export function init();
+
+    export function options(config: options);
+    
     export function Component(config: ComponentConfig): ClassDecorator;
 
     export function Service(config: ServiceConfig|string): ClassDecorator;
@@ -19,8 +21,6 @@ declare module 'angular2-now' {
     export function bootstrap(appName: any, dependencies?: string[]);
 
     export function SetModule(appName: string, dependencies?: string[]);
-
-    export function options(config: options);
 
     export function Inject(dependencies: string[]);
 
